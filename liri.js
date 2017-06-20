@@ -53,7 +53,12 @@ var getTweets = function(){
 
 
   if(!error){
-    console.log(JSON.stringify(tweets, null, 2));
+    for(var x=0;x<tweets.length;x++){
+    console.log("Created at: " + tweets[x].created_at);
+    console.log("User: " + tweets[x].user.screen_name);
+    console.log("Tweet: " + tweets[x].text);
+    console.log("\n");
+    }
   }
   else{
     console.log(error);
